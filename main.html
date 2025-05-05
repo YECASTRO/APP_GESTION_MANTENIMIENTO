@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Mantenimiento</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style_page.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   
+</head>
+
+<body>
+    <div class="body-principal container-fluid ">
+        <div class="row">
+            <!-- Navbar -->
+            <div class=" col-12 col-sm-12 col-md-12 col-lg-2 px-0">
+                <div
+                    class="color-primary rounded-md-start rounded-lg-start rounded-md-4 rounded-lg-4 d-lg-block d-md-block h-md-100 h-lg-100 d-sm-block navbar navbar-expand-lg content-page-100">
+
+                    <div class="row">
+                        <div class="col-10">
+                            <div class="ps-lg-4 ps-2 py-lg-4 py-1">
+                                <h3 class="fw-bold"> Gestión de Mantenimiento</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-2 d-flex align-items-center ">
+                            <div class="justify-content-end">
+                                <button class="navbar-toggler border-0 text-end" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <i class="bi bi-menu-button-wide-fill "></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="d-flex justify-content-start align-items-start">
+                            <div class="nav flex-lg-column flex-sm-col nav-pills " id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
+
+                                <div class="align-items-center">
+                                    <p class="ps-2 text-secondary text-small">MENÚ PRINCIPAL</p>
+                                </div>
+
+                                <button class="text-dark nav-link  rounded-diam  rounded-2 active" id="v-pills-home-tab"
+                                    data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab"
+                                    aria-controls="v-pills-home" aria-selected="true">
+                                    <div class="text-span ps-2">
+                                        <i class="bi bi-house-fill bi-sm mx-2"></i>
+                                        <span class="text-icon ps-1">Inicio</span>
+                                    </div>
+                                </button>
+
+                                <button class="text-dark nav-link rounded-diam " id="v-pills-status-tab"
+                                    data-bs-toggle="pill" data-bs-target="#v-pills-status" type="button"
+                                    aria-controls="v-pills-status" role="tab" aria-selected="false">
+                                    <div class="text-span  ps-2">
+                                        <i class="bi bi-archive bi-sm mx-2"></i>
+                                        <span class="text-icon ps-1"> Gestión de equipos</span>
+                                    </div>
+                                </button>
+
+                                <button class="text-dark nav-link rounded-diam d-none" id="v-pills-status-details-tab"
+                                    data-bs-toggle="pill" data-bs-target="#v-pills-status-details" type="button"
+                                    aria-controls="v-pills-status-details" role="tab" aria-selected="false">
+                                    <div class="text-span  ps-2">
+                                        <i class="bi bi-archive bi-sm mx-2"></i>
+                                        <span class="text-icon ps-1"> Mantenimientos </span>
+                                    </div>
+                                </button>
+
+                                <div class="align-items-center">
+                                    <p class="ps-2 text-secondary text-small">CONFIGURACIÓN</p>
+                                </div>
+
+                                <button class="text-dark nav-link rounded-diam " id="" data-bs-toggle="pill"
+                                    type="button" aria-controls="" aria-selected="false">
+                                    <div class="text-span  ps-2">
+                                        <i class="bi bi-people bi-sm mx-2"></i>
+                                        <span class="text-icon ps-1"> Usuarios </sspan>
+                                    </div>
+                                </button>
+
+                                <button class="text-dark nav-link rounded-diam " id="" data-bs-toggle="pill"
+                                    type="button" aria-controls="" aria-selected="false">
+                                    <div class="text-span  ps-2">
+                                        <i class="bi bi-gear bi-sm mx-2"></i>
+                                        <span class="text-icon ps-1"> Configuración</span>
+                                    </div>
+                                </button>
+
+                                <button class="text-dark nav-link rounded-diam " id="" data-bs-toggle="pill"
+                                    type="button" aria-controls="" aria-selected="false">
+                                    <div class="text-span  ps-2">
+                                        <i class="bi bi-box-arrow-in-right bi-sm mx-2"></i>
+                                        <span class="text-icon ps-1"> Salir</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Navbar -->
+            <div class="col-12 col-sm-12 col-md-12 col-lg-10 ">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <!-- Inicio llenar page principal -->
+                    <div class="tab-pane fade show active " id="v-pills-home" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab" tabindex="0">
+                        <div class="row color-fondo content-page-100 content">
+                            <div class="row p-2">
+                                <div class="col-8 col-md-1 col-lg-10">
+                                    <div class="input-group">
+                                        <span
+                                            class="text-center text-secondary inp-color-secondary d-flex align-items-center rounded-end rounded-4"><i
+                                                class="bi bi-search bi-sm"></i></span>
+                                        <input type="text"
+                                            class="form-control border-0 inp-color-secondary rounded-start rounded-4"
+                                            placeholder="Buscar proyectos">
+                                    </div>
+                                </div>
+                                <div class="col-1 col-md-1 col-lg-1 ">
+                                    <div
+                                        class="d-flex justify-content-start align-items-start  justify-content-lg-start align-items-lg-start">
+                                        <button type="button"
+                                            class="btn inp-color-secondary position-relative rounded-4">
+                                            <i class="bi bi-bell bi-sm"></i>
+                                            <span
+                                                class="position-absolute top-2 start-98 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-3 col-md-2 col-lg-1">
+                                    <div
+                                        class="d-flex justify-content-end align-items-end justify-content-lg-start align-items-lg-start">
+                                        <img class="" src="https://cdn-icons-png.flaticon.com/512/4557/4557002.png"
+                                            width="40" height="40">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col text-start">
+                                    <h5 class="text-dark fw-bold"> Estado de proyectos</h5>
+                                </div>
+                                <div class="col text-end">
+                                    <h6 class="text-dark fw-bold"> Ver todos</h6>
+                                </div>
+                                <!-- Llenar card page principal -->
+                                <div class="col-12">
+                                    <div id="content_status_mantenimiento" class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-3">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fin llenar card -->
+                            <div class="row mt-3">
+                                <div class="col-12 col-md-5 col-lg-5">
+                                    <div class="card card-verde border-0 rounded-4 d-flex justify-content-center">
+                                        <div class="card-body">
+                                            <div class="align-items-start">
+                                                <h6 class="fw-bold ">Proximos mantenimientos</h6>
+                                            </div>
+                                            <div id="content_prox_mantenimiento">
+                                               
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Lenar tabla de proximos mantenimientoa -->
+                                <div class="col-12 col-md-7 col-lg-7">
+                                    <div class="card card-azul border-0 rounded-4 d-flex justify-content-center">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <div class="align-items-start">
+                                                        <h6 class="fw-bold ">Ocupación de los técnicos</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="align-items-end text-end">
+                                                        <p class="fw-bold ">Ver todos</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="" id="content_team_dev">
+                                                <!-- Tecnico Yau -->
+                                                <div class="card p-1 mb-2  shadow-sm rounded-4 border-0">
+                                                    <div class="row">
+                                                        <div class="col-1">
+                                                            <img class="img-fluid img_team_dev"
+                                                                src="https://cdn-icons-png.flaticon.com/512/4526/4526323.png">
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <div class="fw-bold text-small text-start nombre_team_dev">
+                                                                Yaudith Esther Castro Llanos</div>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <div
+                                                                class="text-small text-start text-secondary cargo_team_dev">
+                                                                Técnico </div>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <div
+                                                                class="text-small text-start text-secondary cant_proyect_team_dev">
+                                                                En inspección </div>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <div
+                                                                class="text-small text-start text-secondary planta_team_dev">
+                                                                Equipo B </div>
+                                                        </div>
+                                                        <div class="col-1">
+                                                            <button class="btn btn-warning text-small rounded-4"> <i
+                                                                    class="bi bi-robot bi-sm"></i>Detalles </button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <!-- Tecnico Edwin -->
+                                                <div class="card p-1 mb-2  shadow-sm rounded-4 border-0">
+                                                    <div class="row">
+                                                        <div class="col-1">
+                                                            <img class="img-fluid img_team_dev"
+                                                                src="https://cdn-icons-png.flaticon.com/512/4526/4526426.png">
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <div class="fw-bold text-small text-start nombre_team_dev">
+                                                                Edwin de Jesús Fuenmayor Hernández</div>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <div
+                                                                class="text-small text-start text-secondary cargo_team_dev">
+                                                                Supervisor </div>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <div
+                                                                class="text-small text-start text-secondary cant_proyect_team_dev">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <div
+                                                                class="text-small text-start text-secondary planta_team_dev">
+                                                                Equipo A</div>
+                                                        </div>
+                                                        <div class="col-1">
+                                                            <button class="btn btn-warning text-small rounded-4"> <i
+                                                                    class="bi bi-robot bi-sm"></i>Detalles </button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fin llenar page principal -->
+
+                    <!-- Page Mantenimiento -->
+                    <div class="tab-pane fade" id="v-pills-status" role="tabpanel" aria-labelledby="v-pills-status-tab">
+                        <div class="row color-fondo content-page-100 content">
+                            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mb-2">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item text-small breadcrumb_home"><a>Inicio</a></li>
+                                    <li class="breadcrumb-item text-small text-dark text-capitalize" id="nam_status"
+                                        aria-current="page">Gestión de equipos</li>
+                                </ol>
+                                <div> <button class="btn btn-warning text-small rounded-4"> <i
+                                    class="bi bi-robot bi-sm"></i>Registrar Nuevo equipo</button> </div>
+                            </nav>
+
+                            <div id="content_gestion_equipo"  class=" h-100 d-flex justify-content-start align-items-start row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-4">
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-status-details" role="tabpanel"
+                        aria-labelledby="v-pills-status-details-tab">
+                        <div class="pageStatusDetailsContent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <template id="template_status_mantenimiento">
+        <div class="col">
+            <div class="card border-0 shadow-sm card_details rounded-4 p-2 mb-2">
+                <div class="row">
+                    <div class="col-8">
+                        <p>
+                            <span class="text-secondary ">Total:</span>
+                            <span class="text-dark text-small"></span>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid bg-white rounded-circle img_details" width="70" height="70"
+                            src="">
+                    </div>
+                </div>
+                <div class="mb-1 cant_details fs-2 text-center"></div>
+                <div class="text-dark  nombre_details"></div>
+                <div class="text-small text-secondary fw-light text-3-line descripcion_details">
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="template_prox_manteni">
+        <div class="card my-2 p-2 shadow-sm rounded-4 border-0">
+            <div class="row">
+                <div class="col-8">
+                    <div class="fw-bold nombre_equipo text-small">
+                    </div>
+                    <div
+                        class="text-small text-secondary text-small">
+                        Fecha:<span class="fecha_equipo"></span>
+                    </div>
+                    <div
+                        class="text-small text-secondary beneficio_proyect text-small">
+                        Tipo: <span class="tipo_equipo"></span>
+                    </div>
+                    <div
+                        class="text-small text-secondary beneficio_proyect text-small">
+                        Proxima acción: <span class="proxima_inspeccion"></span> 
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid img_equipo " width="70" height="70" src="">
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="template_gestion_equipo">
+        <div class="col">
+            <div class="card border-0 shadow-sm  card_details rounded-4 p-2 ">
+                <div class="row">
+                    <div class="col-8">
+                        <p>
+                            <span class="text-secondary text-small">Registrado:</span>
+                            <span class="text-dark text-small date_details">May 5, 2025</span>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid bg-white rounded-circle img_details" width="50"
+                            height="50"
+                            src="">
+                    </div>
+                </div>
+                <div class="mb-2 nombre_details">Equipo A</div>
+                <div class="text-dark text-small "> Numero Serie: <span class="num_ser_details"></span> </div>
+                <div class="text-small text-secondary fw-light ">
+                    Modelo: <span class="descripcion_details"></span>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
