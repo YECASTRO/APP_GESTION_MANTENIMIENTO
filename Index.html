@@ -72,14 +72,14 @@
                                     </div>
                                 </button>
 
-                                <button class="text-dark nav-link rounded-diam " id="v-pills-status-tab"
-                                    data-bs-toggle="pill" data-bs-target="#v-pills-status" type="button"
+                                <a  class="text-dark nav-link rounded-diam " id="v-pills-status-tab"
+                                href="views/Gestion_mantenimiento.html" type="button"
                                     aria-controls="v-pills-status" role="tab" aria-selected="false">
                                     <div class="text-span  ps-2">
                                         <i class="bi bi-archive bi-sm mx-2"></i>
                                         <span class="text-icon ps-1"> Gestión de equipos</span>
                                     </div>
-                                </button>
+                                </a>
 
                                 <button class="text-dark nav-link rounded-diam d-none" id="v-pills-status-details-tab"
                                     data-bs-toggle="pill" data-bs-target="#v-pills-status-details" type="button"
@@ -94,13 +94,13 @@
                                     <p class="ps-2 text-secondary text-small">CONFIGURACIÓN</p>
                                 </div>
 
-                                <button class="text-dark nav-link rounded-diam " id="" data-bs-toggle="pill"
-                                    type="button" aria-controls="" aria-selected="false">
+                                <a class="text-dark nav-link rounded-diam " id="" 
+                                    type="button" href="views/usuarios.html" aria-controls="" aria-selected="false">
                                     <div class="text-span  ps-2">
                                         <i class="bi bi-people bi-sm mx-2"></i>
                                         <span class="text-icon ps-1"> Usuarios </sspan>
                                     </div>
-                                </button>
+                                </a>
 
                                 <button class="text-dark nav-link rounded-diam " id="" data-bs-toggle="pill"
                                     type="button" aria-controls="" aria-selected="false">
@@ -283,34 +283,7 @@
                     </div>
                     <!-- Fin llenar page principal -->
 
-                    <!-- Page Mantenimiento -->
-                    <div class="tab-pane fade" id="v-pills-status" role="tabpanel" aria-labelledby="v-pills-status-tab">
-                        <div class="row color-fondo content-page-100 content">
-                            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mb-2">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item text-small breadcrumb_home"><a>Inicio</a></li>
-                                    <li class="breadcrumb-item text-small text-dark text-capitalize" id="nam_status"
-                                        aria-current="page">Gestión de equipos</li>
-                                </ol>
-                                <div> <button class="btn btn-warning text-small rounded-4"> <i
-                                    class="bi bi-robot bi-sm"></i>Registrar Nuevo equipo</button> </div>
-                            </nav>
-
-                            <div id="content_gestion_equipo"  class=" h-100 d-flex justify-content-start align-items-start row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-4">
-                                
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade" id="v-pills-status-details" role="tabpanel"
-                        aria-labelledby="v-pills-status-details-tab">
-                        <div class="pageStatusDetailsContent"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                    
 
 
     <template id="template_status_mantenimiento">

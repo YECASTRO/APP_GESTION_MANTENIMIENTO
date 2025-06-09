@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Mantenimiento</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/style_page.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body>
+    <div class="body-principal container-fluid ">
+        <div class="row">
+            <div class=" col-12 col-sm-12 col-md-12 col-lg-2 px-0">
+                <div
+                    class="color-primary rounded-md-start rounded-lg-start rounded-md-4 rounded-lg-4 d-lg-block d-md-block h-md-100 h-lg-100 d-sm-block navbar navbar-expand-lg content-page-100">
+
+                    <div class="row">
+                        <div class="col-10">
+                            <div class="ps-lg-4 ps-2 py-lg-4 py-1">
+                                <h3 class="fw-bold"> Gestión de Mantenimiento</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-2 d-flex align-items-center ">
+                            <div class="justify-content-end">
+                                <button class="navbar-toggler border-0 text-end" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <i class="bi bi-menu-button-wide-fill "></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="d-flex justify-content-start align-items-start">
+                            <div class="nav flex-lg-column flex-sm-col nav-pills " id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
+
+                                <div class="align-items-center">
+                                    <p class="ps-2 text-secondary text-small">MENÚ PRINCIPAL</p>
+                                </div>
+
+                                <a class="text-dark nav-link rounded-diam rounded-2" id="v-pills-home-tab"
+                                href="../Index.html" type="button" role="tab"
+                                    aria-controls="v-pills-home" aria-selected="false">
+                                    <div class="text-span ps-2">
+                                        <i class="bi bi-house-fill bi-sm mx-2"></i>
+                                        <span class="text-icon ps-1">Inicio</span>
+                                    </div>
+                                </a>
+
+                                <button class="text-dark nav-link rounded-diam active" id="v-pills-status-tab"
+                                    data-bs-toggle="pill" data-bs-target="#v-pills-status" type="button"
+                                    aria-controls="v-pills-status" role="tab" aria-selected="true">
+                                    <div class="text-span ps-2">
+                                        <i class="bi bi-archive bi-sm mx-2"></i>
+                                        <span class="text-icon ps-1"> Gestión de equipos</span>
+                                    </div>
+                                </button>
+
+                                <button class="text-dark nav-link rounded-diam d-none" id="v-pills-status-details-tab"
+                                    data-bs-toggle="pill" data-bs-target="#v-pills-status-details" type="button"
+                                    aria-controls="v-pills-status-details" role="tab" aria-selected="false">
+                                    <div class="text-span ps-2">
+                                        <i class="bi bi-archive bi-sm mx-2"></i>
+                                        <span class="text-icon ps-1"> Mantenimientos </span>
+                                    </div>
+                                </button>
+
+                                <div class="align-items-center">
+                                    <p class="ps-2 text-secondary text-small">CONFIGURACIÓN</p>
+                                </div>
+
+                                <a class="text-dark nav-link rounded-diam " id="" 
+                                    type="button" href="../views/usuarios.html" aria-controls="" aria-selected="false">
+                                    <div class="text-span  ps-2">
+                                        <i class="bi bi-people bi-sm mx-2"></i>
+                                        <span class="text-icon ps-1"> Usuarios </sspan>
+                                    </div>
+                                </a>
+
+                                <button class="text-dark nav-link rounded-diam " id="" data-bs-toggle="pill"
+                                    type="button" aria-controls="" aria-selected="false">
+                                    <div class="text-span ps-2">
+                                        <i class="bi bi-gear bi-sm mx-2"></i>
+                                        <span class="text-icon ps-1"> Configuración</span>
+                                    </div>
+                                </button>
+
+                                <button class="text-dark nav-link rounded-diam " id="" data-bs-toggle="pill"
+                                    type="button" aria-controls="" aria-selected="false">
+                                    <div class="text-span ps-2">
+                                        <i class="bi bi-box-arrow-in-right bi-sm mx-2"></i>
+                                        <span class="text-icon ps-1"> Salir</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-10 ">
+                <div class="tab-content" id="v-pills-tabContent">
+                    
+                    <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        </div>
+
+                    <div class="tab-pane fade show active" id="v-pills-status" role="tabpanel" aria-labelledby="v-pills-status-tab">
+                        <div class="row color-fondo content-page-100 content">
+                            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mb-2">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item text-small breadcrumb_home"><a>Inicio</a></li>
+                                    <li class="breadcrumb-item text-small text-dark text-capitalize" id="nam_status"
+                                        aria-current="page">Gestión de equipos</li>
+                                </ol>
+                                <div> <button class="btn btn-warning text-small rounded-4"> <i
+                                        class="bi bi-robot bi-sm"></i>Registrar Nuevo equipo</button> </div>
+                            </nav>
+
+                            <div id="content_gestion_equipo" class=" h-100 d-flex justify-content-start align-items-start row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-4">
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-status-details" role="tabpanel"
+                        aria-labelledby="v-pills-status-details-tab">
+                        <div class="pageStatusDetailsContent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let data_equipos = [
+            ["May 5, 2025", "Equipo A", "SE2312", "Modelo 123", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-azul"],
+            ["May 10, 2025", "Equipo B", "SE2452", "Modelo 234", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-verde-light"],
+            ["May 15, 2025", "Equipo C", "SE2678", "Modelo 456", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-rojo"],
+            ["May 20, 2025", "Equipo D", "SE2890", "Modelo 789", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-morado"],
+            ["May 25, 2025", "Equipo E", "SE3012", "Modelo 012", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-azul-light"],
+            ["May 30, 2025", "Equipo F", "SE3234", "Modelo 345", "https://cdn-icons-png.flacon.com/128/2210/2210178.png", "card-verde-dark"],
+            ["June 5, 2025", "Equipo G", "SE3456", "Modelo 678", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-azul"],
+            ["June 10, 2025", "Equipo H", "SE3678", "Modelo 901", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-rojo"],
+            ["June 15, 2025", "Equipo I", "SE3890", "Modelo 234", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-morado"],
+            ["June 20, 2025", "Equipo J", "SE4012", "Modelo 567", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-verde-light"],
+            ["June 25, 2025", "Equipo K", "SE4234", "Modelo 890", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-azul-light"],
+            ["June 30, 2025", "Equipo L", "SE4456", "Modelo 123", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-verde-dark"],
+            ["July 5, 2025", "Equipo M", "SE4678", "Modelo 456", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-rojo"],
+            ["July 10, 2025", "Equipo N", "SE4890", "Modelo 789", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-morado"],
+            ["July 15, 2025", "Equipo O", "SE5012", "Modelo 012", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-azul"], 
+            ["July 20, 2025", "Equipo P", "SE5234", "Modelo 345", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-verde-light"],
+            ["July 25, 2025", "Equipo Q", "SE5456", "Modelo 678", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-azul-light"],
+            ["July 30, 2025", "Equipo R", "SE5678", "Modelo 901", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-verde-dark"],
+            ["August 5, 2025", "Equipo S", "SE5890", "Modelo 234", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-rojo"],
+            ["August 10, 2025", "Equipo T", "SE6012", "Modelo 567", "https://cdn-icons-png.flaticon.com/128/2210/2210178.png", "card-morado"]
+        ];
+
+        function llenarGestionManteni() {
+            const contentGestionEquipo = document.getElementById('content_gestion_equipo');
+            contentGestionEquipo.innerHTML = ''; // Limpiar el contenido existente
+
+            data_equipos.forEach(equipo => {
+                const [fecha, nombreEquipo, serie, modelo, imagen, cardClass] = equipo;
+
+                const cardHtml = `
+                    <div class="col my-2">
+                        <div class="card ${cardClass} card-equipment rounded-4 text-dark" style="width: 18rem;" 
+                            data-bs-toggle="pill" data-bs-target="#v-pills-status-details" type="button" 
+                            role="tab" aria-controls="v-pills-status-details" aria-selected="false">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-4">
+                                        <img src="${imagen}" class="img-fluid" alt="Icono de equipo">
+                                    </div>
+                                    <div class="col-8">
+                                        <h5 class="card-title fw-bold">${nombreEquipo}</h5>
+                                        <p class="card-text text-small mb-0">Serie: ${serie}</p>
+                                        <p class="card-text text-small">Modelo: ${modelo}</p>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-12">
+                                        <p class="card-text text-small text-muted">Último mantenimiento: ${fecha}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                contentGestionEquipo.innerHTML += cardHtml;
+            });
+
+            // Añadir el event listener a cada tarjeta para cambiar de pestaña
+            contentGestionEquipo.querySelectorAll('.card-equipment').forEach(card => {
+                card.addEventListener('click', () => {
+                    const statusTab = document.getElementById('v-pills-status-tab');
+                    const statusDetailsTab = document.getElementById('v-pills-status-details-tab');
+
+                    // Ocultar la pestaña activa actual
+                    statusTab.classList.remove('active');
+                    document.getElementById('v-pills-status').classList.remove('show', 'active');
+
+                    // Mostrar la pestaña de detalles
+                    statusDetailsTab.classList.add('active');
+                    document.getElementById('v-pills-status-details').classList.add('show', 'active');
+                });
+            });
+
+            // Añadir event listener al breadcrumb "Inicio" para volver a la lista de equipos
+            document.querySelector('.breadcrumb_home').addEventListener('click', () => {
+                const statusTab = document.getElementById('v-pills-status-tab');
+                const statusDetailsTab = document.getElementById('v-pills-status-details-tab');
+
+                // Ocultar la pestaña de detalles
+                statusDetailsTab.classList.remove('active');
+                document.getElementById('v-pills-status-details').classList.remove('show', 'active');
+
+                // Mostrar la pestaña de lista de equipos
+                statusTab.classList.add('active');
+                document.getElementById('v-pills-status').classList.add('show', 'active');
+            });
+        }
+
+        // Llama a la función cuando el DOM esté completamente cargado
+        document.addEventListener('DOMContentLoaded', llenarGestionManteni);
+    </script>
+</body>
+
+</html>
